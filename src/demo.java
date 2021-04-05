@@ -20,25 +20,25 @@ public class demo {
         }
         return arr;
     }
-    static void MaxArr2Chieu(int arr[][]){
-        int max = arr[0][0];
+    static void minArr2Chieu(int arr[][]){
+        int min = arr[0][0];
         int index1=0;
         int index2=0;
         for (int n=0; n<arr.length;n++){
             for (int m=0;m<arr[n].length;m++){
-                if(arr[n][m]>max){
-                    max = arr[n][m];
+                if(arr[n][m]<min){
+                    min = arr[n][m];
                     index1=n;
                     index2=m;
                 }
             }
         }
-        System.out.println("max là: "+max+" tại vị trí arr["+index1+"]["+index2+"]");
+        System.out.println("min là: "+min+" tại vị trí arr["+index1+"]["+index2+"]");
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int arr[][]=arr(scanner);
-        MaxArr2Chieu(arr);
+        minArr2Chieu(arr);
 //        int max=arr[0][0];
 //        for (int n=0; n<arr.length;n++) {
 //            for (int m = 0; m < arr[n].length; m++) {
